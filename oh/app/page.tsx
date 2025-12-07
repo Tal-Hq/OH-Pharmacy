@@ -50,35 +50,35 @@ export default function Home() {
             id: "vitamin-b12",
             title: "Vitamin B12",
             description: "We offer a private Vitamin B12 injection service at our pharmacy. Please complete your order online to get the injection at the pharmacy.",
-            image: "/images/chicken-pox.jpg",
+            image: "https://plus.unsplash.com/premium_photo-1673953886109-a3249821993d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5qZWN0aW9ufGVufDB8fDB8fHww",
             href: "/Services/vitamin-b12"
           },
           {
             id: "travel-clinic",
             title: "Travel Clinic",
             description: "Are you travelling abroad soon? Get expert travel health advice, vaccines and antimalarials at our pharmacy.",
-            image: "/images/travel.jpg",
+            image: "https://images.unsplash.com/photo-1758691461957-474a7686e388?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG1lZGljYWwlMjBjb25zdWx0YXRpb258ZW58MHx8MHx8fDA%3D",
             href: "/Travel-Clinic/travel-vaccination"
           },
           {
             id: "speciality-vaccine",
             title: "Speciality Vaccine",
             description: "We offer private speciality vaccines at our pharmacy, including Chickenpox, Shingles and HPV vaccines. Book your appointment online.",
-            image: "/images/injection.jpg",
+            image: "https://images.unsplash.com/photo-1668874896975-7f874c90600a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNwZWNpYWx0eSUyMHZhY2NpbmV8ZW58MHx8MHx8fDA%3D",
             href: "/Travel-Clinic/special-vaccination"
           },
           {
             id: "earwax-removal",
             title: "Earwax Removal",
             description: "Professional microsuction earwax removal service. Safe, effective, and performed by trained professionals. Book your appointment online.",
-            image: "/images/ear-infection.jpg",
+            image: "https://images.unsplash.com/photo-1741174844812-c59239e677be?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFyJTIwd2F4JTIwcmVtb3ZhbHxlbnwwfHwwfHx8MA%3D%3D",
             href: "/Services/earwax-removal-service"
           },
           {
             id: "private-health-checks",
             title: "Private Health Checks",
             description: "Comprehensive health assessments and health MOTs to monitor your wellbeing. Includes blood pressure, cholesterol, and diabetes screening.",
-            image: "/images/health-assessmt.jpg",
+            image: "https://plus.unsplash.com/premium_photo-1661595281880-59563ed648c9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJpdmF0ZSUyMGhlYWx0aCUyMGNoZWNrfGVufDB8fDB8fHww",
             href: "/Services/private-health-checks"
           }
         ]}
