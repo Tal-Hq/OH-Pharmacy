@@ -20,7 +20,7 @@ export default function Home() {
             <span className="text-primary">Health & Wellness</span>
           </>
         }
-        subtitle="We provide expert travel vaccinations, weight loss programmes, wellness injections, and comprehensive private healthcare services."
+        subtitle="We offer expert travel vaccinations, weight loss programmes, wellness injections, and a full range of private healthcare services — all tailored to your needs."
         callToAction={{
           text: "BOOK AN APPOINTMENT",
           href: "/book-services",
@@ -44,11 +44,10 @@ export default function Home() {
           <div className="bg-black/25 p-5 sm:p-8 lg:p-12">
             <div className="ml-auto max-w-2xl rounded-2xl bg-white/90 p-6 backdrop-blur-sm sm:p-8">
               <h2 className="mb-4 text-3xl font-bold leading-tight text-[#111418] sm:text-4xl">
-               Meningitis Vaccine Available
+               Meningitis Vaccination — Now Available
               </h2>
               <p className="mb-4 text-base leading-relaxed text-[#374151]">
-                 We offer a private meningitis vaccination service, symptom assessment, and medically guided treatment support. 
-                 Book your appointment online today.
+                 Protect yourself and your family with our private meningitis vaccination service. We also offer symptom assessment and medically guided treatment support for complete peace of mind. Book your appointment online today.
               </p>
              
               <div className="flex flex-wrap gap-3">
