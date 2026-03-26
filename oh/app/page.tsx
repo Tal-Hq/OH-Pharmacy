@@ -44,7 +44,7 @@ export default function Home() {
           <div className="bg-black/25 p-5 sm:p-8 lg:p-12">
             <div className="ml-auto max-w-2xl rounded-2xl bg-white/90 p-6 backdrop-blur-sm sm:p-8">
               <h2 className="mb-4 text-3xl font-bold leading-tight text-[#111418] sm:text-4xl">
-               Meningitis Care Available
+               Meningitis Vaccine Available
               </h2>
               <p className="mb-4 text-base leading-relaxed text-[#374151]">
                  We offer a private meningitis vaccination service, symptom assessment, and medically guided treatment support. 
