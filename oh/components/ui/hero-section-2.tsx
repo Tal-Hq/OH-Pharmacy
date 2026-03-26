@@ -96,10 +96,7 @@ const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
             {/* Bottom Section: Footer Info */}
             <footer className="mt-12 w-full">
                 <div className="grid grid-cols-1 gap-6 text-xs text-muted-foreground sm:grid-cols-3">
-                    <div className="flex items-center">
-                        <InfoIcon type="phone" />
-                        <span>{contactInfo.phone}</span>
-                    </div>
+                    
                     <div className="flex items-center">
                         <InfoIcon type="address" />
                         <span>{contactInfo.address}</span>

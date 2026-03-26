@@ -27,7 +27,7 @@ export default function Home() {
         }}
         backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuACJT9xEVblSG9BgdONhzauh1Pgqs2YiQdALqxWci0h6zigwK-v1_UZdkYnTWpdD3y9Jzw6TaFya9Mrwxhc6wgBMyl64LPPDaqZrHxOrxy-qf7c_DION9I6IX8ug_-i7ke6U19FYMIr2X1GtBnholl6tVp3OyBSwE1r3yRUN4kZj1pzOpGl6HI5Y1XIrc32FXTTwDx_DcKCV7OgoUOipuYilC1j11McCe51YPJqfo65KDZvQRBA1BaHRt44WOyFcP7w-nuftE20Vlev"
         contactInfo={{
-          phone: "0333 006 5650",
+          phone: "",
           address: "6 - 8 Longmarket, Canterbury, CT1 2JS, United Kingdom",
         }}
       />

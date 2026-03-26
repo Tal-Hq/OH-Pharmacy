@@ -1,7 +1,6 @@
 import { Metadata } from "next";
 import Hero from "@/components/ui/Hero";
 import {
-  FaPhone,
   FaMapMarkerAlt,
   FaEnvelope,
   FaClock,
@@ -35,7 +34,7 @@ export default function ContactUsPage() {
           
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1  gap-12">
 
             {/* LEFT — GET IN TOUCH FORM */}
             <div className="bg-white rounded-xl border border-border p-8">
@@ -106,24 +105,6 @@ export default function ContactUsPage() {
                 </div>
               </Card>
 
-              {/* Phone */}
-              <Card className="border border-border shadow-none">
-                <div className="text-center">
-                  <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
-                    <FaPhone className="text-white text-2xl" />
-                  </div>
-                  <h3 className="font-display font-semibold text-lg mb-2">
-                    Phone
-                  </h3>
-                  <a
-                    href="tel:03330065650"
-                    className="text-primary hover:underline text-sm"
-                  >
-                    0333 006 5650
-                  </a>
-                </div>
-              </Card>
-
               {/* Email */}
               <Card className="border border-border shadow-none">
                 <div className="text-center">
@@ -143,7 +124,7 @@ export default function ContactUsPage() {
               </Card>
 
               {/* Opening Hours */}
-              <Card className="border border-border shadow-none">
+            {/*   <Card className="border border-border shadow-none">
                 <div className="text-center">
                   <div className="w-16 h-16 bg-gradient-accent rounded-full flex items-center justify-center mx-auto mb-4">
                     <FaClock className="text-white text-2xl" />
@@ -152,12 +133,12 @@ export default function ContactUsPage() {
                     Opening Hours
                   </h3>
                   <p className="text-text-light text-sm leading-relaxed">
-                    Mon–Fri: 9am–6pm <br />
-                    Sat: 9am–5pm <br />
-                    Sun: Closed
+                    Mon–Wed: 9am–6pm <br />
+                    Thu–Fri: Closed <br />
+                    Sat–Sun: 9am–5pm
                   </p>
                 </div>
-              </Card>
+              </Card> */}
 
             </div>
           </div>
