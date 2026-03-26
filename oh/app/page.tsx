@@ -80,14 +80,14 @@ export default function Home() {
           {
             id: "weight-loss",
             title: "Weight Loss Service",
-            description: "We offer a private weight loss service in partnership with Expert Weight Loss. Our service offers online consultations, diet and exercise advice and regular check-in appointments.",
+            description: "We offer a private weight loss service. Our service offers online consultations, diet and exercise advice and regular check-in appointments.",
             image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop',
             href: "/weight-loss-service"
           },
           {
             id: "vitamin-b12",
             title: "Vitamin B12",
-            description: "We offer a private Vitamin B12 injection service at our pharmacy. Please complete your order online to get the injection at the pharmacy.",
+            description: "We offer a private Vitamin B12 injection service at our pharmacy. Book your appointment online.",
             image: "https://plus.unsplash.com/premium_photo-1673953886109-a3249821993d?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8aW5qZWN0aW9ufGVufDB8fDB8fHww",
             href: "/Services/vitamin-b12"
           },
