@@ -24,6 +24,7 @@ export default function BookingForm() {
   });
   const [phoneError, setPhoneError] = useState<string>('');
   const [dateError, setDateError] = useState<string>('');
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const contactMethods = ['Email', 'Phone', 'Either'];
   
@@ -46,15 +47,15 @@ export default function BookingForm() {
     return today.toISOString().split('T')[0];
   };
 
-  // Check if a date is Sunday (Sunday = 0)
-  const isSunday = (date: Date): boolean => {
+  // Block Thursdays and Fridays (Thursday = 4, Friday = 5)
+  const isBlockedDay = (date: Date): boolean => {
     const dayOfWeek = date.getDay();
-    return dayOfWeek === 0; // Sunday
+    return dayOfWeek === 4 || dayOfWeek === 5;
   };
 
-  // Filter Sundays from date picker (allow Monday to Saturday)
-  const filterSundays = (date: Date): boolean => {
-    return !isSunday(date);
+  // Allow all days except Thursdays and Fridays (Sunday is open)
+  const filterAvailableDates = (date: Date): boolean => {
+    return !isBlockedDay(date);
   };
 
   // Handle date change from DatePicker
@@ -72,13 +73,18 @@ export default function BookingForm() {
 
   // Pre-select service from query parameter
   useEffect(() => {
-    const serviceId = searchParams.get('service');
-    if (serviceId) {
-      const service = services.find(s => s.id === serviceId);
-      if (service) {
-        setSelectedService(service.id);
-        setServiceSearch(service.title);
-      }
+    const serviceQuery = searchParams.get('service');
+    if (!serviceQuery) return;
+
+    // Prefer exact ID match, then fallback to title match for URLs like ?service=meningitis.
+    const normalizedQuery = serviceQuery.trim().toLowerCase();
+    const service =
+      services.find((s) => s.id.toLowerCase() === normalizedQuery) ??
+      services.find((s) => s.title.toLowerCase().includes(normalizedQuery));
+
+    if (service) {
+      setSelectedService(service.id);
+      setServiceSearch(service.title);
     }
   }, [searchParams]);
 
@@ -188,7 +194,7 @@ export default function BookingForm() {
     }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     
     // Validate phone number before submission
@@ -203,22 +209,54 @@ export default function BookingForm() {
       return;
     }
     
-    // Double-check that selected date is not a Sunday
-    if (selectedDateObj && isSunday(selectedDateObj)) {
-      setDateError('We are closed on Sundays. Please select a date from Monday to Saturday.');
+    // Double-check blocked days are not selected
+    if (selectedDateObj && isBlockedDay(selectedDateObj)) {
+      setDateError('We are closed on Thursdays and Fridays. Please select another day.');
       return;
     }
     
-    // Handle form submission here
-    console.log({
-      service: selectedServiceData,
-      appointmentDate: selectedDate,
-      appointmentTime: selectedTime,
-      preferredContact,
-      ...formData,
-    });
-    // You can add API call here to submit the booking request
-    alert('Booking request submitted! We will contact you soon.');
+    if (!selectedServiceData) {
+      alert('Please select a service before submitting your booking.');
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/bookings', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          serviceId: selectedServiceData.id,
+          serviceTitle: selectedServiceData.title,
+          appointmentDate: selectedDate,
+          appointmentTime: selectedTime,
+          preferredContact,
+          ...formData,
+        }),
+      });
+
+      const data = await response.json();
+      if (!response.ok) {
+        throw new Error(data?.error || 'Failed to submit booking request.');
+      }
+
+      alert('Booking request submitted! We will contact you soon.');
+      setSelectedDate('');
+      setSelectedDateObj(null);
+      setSelectedTime('');
+      setPreferredContact('');
+      setSelectedService('');
+      setServiceSearch('');
+      setFormData({ name: '', email: '', phone: '', message: '' });
+    } catch (error) {
+      const errorMessage =
+        error instanceof Error ? error.message : 'Failed to submit booking request.';
+      alert(errorMessage);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -285,15 +323,15 @@ export default function BookingForm() {
             Preferred Appointment Date <span className="text-red-500">*</span>
           </label>
           <p className="text-sm text-[#617589] mb-3">
-            Select your preferred date for the appointment (Monday-Saturday only)
+            Select your preferred date for the appointment (closed Thursdays and Fridays)
           </p>
           <DatePicker
             selected={selectedDateObj}
             onChange={handleDateChange}
-            filterDate={filterSundays}
+            filterDate={filterAvailableDates}
             minDate={new Date()}
             dateFormat="dd/MM/yyyy"
-            placeholderText="Select a date (Monday-Saturday)"
+            placeholderText="Select a date"
             className={`w-full px-4 py-3 border rounded-lg bg-[#f4f7f6] focus:ring-2 focus:ring-primary focus:outline-none ${
               dateError ? 'border-red-500' : 'border-gray-300'
             }`}
@@ -397,9 +435,10 @@ export default function BookingForm() {
         <div className="pt-4">
           <button
             type="submit"
+            disabled={isSubmitting}
             className="w-full md:w-auto px-8 py-4 rounded-full bg-primary text-white font-semibold hover:bg-primary/90 transition-colors text-base"
           >
-            Submit Booking Request
+            {isSubmitting ? 'Submitting...' : 'Submit Booking Request'}
           </button>
         </div>
       </form>

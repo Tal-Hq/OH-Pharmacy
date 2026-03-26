@@ -53,7 +53,7 @@ export default function Home() {
              
               <div className="flex flex-wrap gap-3">
                 <Link
-                  href="/book-services"
+                  href="/book-services?service=meningitis-acwy"
                   className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
                 >
                   Book Appointment
