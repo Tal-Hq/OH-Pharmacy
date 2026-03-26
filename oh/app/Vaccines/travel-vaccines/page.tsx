@@ -4,7 +4,7 @@ import ServiceGrid from '@/components/services/ServiceGrid';
 import { getServicesByCategory } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'Travel Vaccines - OH Health + Pharmacy',
+  title: 'Travel Vaccines - OH Health+ Pharmacy',
   description: 'Comprehensive travel vaccination services. Get protected before your trip.',
 };
 

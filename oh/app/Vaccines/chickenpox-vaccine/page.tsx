@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Chicken Pox Vaccine - OH Health + Pharmacy',
+  title: 'Chicken Pox Vaccine - OH Health+ Pharmacy',
   description: 'Chicken vaccination for travel protection.',
 };
 

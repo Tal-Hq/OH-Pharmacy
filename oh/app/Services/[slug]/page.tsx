@@ -24,13 +24,13 @@ export async function generateMetadata({ params }: { params: Promise<Params> }):
 
   if (!service) {
     return {
-      title: 'Service - OH Health + Pharmacy',
-      description: 'Discover the services we offer at OH Health + Pharmacy.',
+      title: 'Service - OH Health+ Pharmacy',
+      description: 'Discover the services we offer at OH Health+ Pharmacy.',
     };
   }
 
   return {
-    title: `${service.title} - OH Health + Pharmacy`,
+    title: `${service.title} - OH Health+ Pharmacy`,
     description: service.description,
   };
 }

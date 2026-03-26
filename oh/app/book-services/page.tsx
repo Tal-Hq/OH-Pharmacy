@@ -4,7 +4,7 @@ import Hero from '@/components/ui/Hero';
 import BookingForm from '@/components/book/BookingForm';
 
 export const metadata: Metadata = {
-  title: 'Book Services Online - OH Health + Pharmacy',
+  title: 'Book Services Online - OH Health+ Pharmacy',
   description: 'Book our expert healthcare services online 24/7. Travel vaccinations, weight loss programmes, and more. Book your appointment in minutes.',
 };
 

@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Cholera Vaccine - OH Health + Pharmacy',
+  title: 'Cholera Vaccine - OH Health+ Pharmacy',
   description: 'Cholera vaccination for travel protection.',
 };
 

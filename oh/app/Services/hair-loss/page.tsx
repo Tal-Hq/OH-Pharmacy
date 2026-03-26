@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Hair Loss Treatment - OH Health + Pharmacy',
+  title: 'Hair Loss Treatment - OH Health+ Pharmacy',
   description: 'Expert hair loss treatment and consultation services.',
 };
 

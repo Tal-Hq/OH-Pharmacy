@@ -8,7 +8,7 @@ import {
 } from "react-icons/fa";
 import Card from "@/components/ui/Card";
 
-export const metadata: Metadata = { title: 'Contact Us - OH Health + Pharmacy', description: 'Get in touch with OH Health + Pharmacy. We are here to help with all your healthcare needs.', 
+export const metadata: Metadata = { title: 'Contact Us - OH Health+ Pharmacy', description: 'Get in touch with OH Health+ Pharmacy. We are here to help with all your healthcare needs.', 
 
 };
 
@@ -18,7 +18,7 @@ export default function ContactUsPage() {
       {/* HERO */}
       <Hero
         title="Contact Us"
-        description="Get in touch with OH Health + Pharmacy. We are here to help with your healthcare needs."
+        description="Get in touch with OH Health+ Pharmacy. We are here to help with your healthcare needs."
         image="https://lh3.googleusercontent.com/aida-public/AB6AXuB_csFz9j5Dee86UdXPpn_9P6Al3rLszCLqAXcqCx0tX_RoumFdDHumzNBSb5UqWEoK-rO7UwTWf1t1-K5caquHHASVqhnpJhsFRuykQ4h4-k1NIYqWNpSpFHOHz2Fgp6WEmeh7X3TbJ6BkXBhOa0tQjyhj7joChIOF6Lqe1AiktM1r0fDVgHj2mbIdp8L9QEgFWKV0jWgxuUZYKigD8h7vOYmA2wDQg19JT6ffOpipRVU1TZWm9XBZy9WTc7NAQNum1eZiY0e5gu6b"
       />
 
@@ -97,7 +97,7 @@ export default function ContactUsPage() {
                     Address
                   </h3>
                   <p className="text-text-light text-sm leading-relaxed">
-                    OH Health + Pharmacy <br />
+                    OH Health+ Pharmacy <br />
                     6 - 8 Longmarket <br />
                     Canterbury <br />
                     CT1 2JS <br />

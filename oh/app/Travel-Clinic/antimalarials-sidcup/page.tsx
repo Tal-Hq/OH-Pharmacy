@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Antimalarials - OH Health + Pharmacy',
+  title: 'Antimalarials - OH Health+ Pharmacy',
   description: 'Expert advice and antimalarial medication for your travel needs.',
 };
 

@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Dengue Vaccine - OH Health + Pharmacy',
+  title: 'Dengue Vaccine - OH Health+ Pharmacy',
   description: 'Dengue fever vaccination.',
 };
 

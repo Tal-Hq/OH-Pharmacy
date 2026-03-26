@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Private Prescriptions - OH Health + Pharmacy',
+  title: 'Private Prescriptions - OH Health+ Pharmacy',
   description: 'We offer private prescription services for your convenience.',
 };
 

@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Blood Tests - OH Health + Pharmacy',
+  title: 'Blood Tests - OH Health+ Pharmacy',
   description: 'A wide range of blood tests available with fast, accurate results. Comprehensive diagnostic testing to help monitor your health and detect potential issues early.',
 };
 

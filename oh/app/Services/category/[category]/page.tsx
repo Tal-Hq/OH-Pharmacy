@@ -105,11 +105,11 @@ export async function generateMetadata({ params }: CategoryPageProps): Promise<M
   const categoryInfo = categoryMap[category as CategoryKey];
 
   if (!categoryInfo) {
-    return { title: 'Category Not Found - OH Health + Pharmacy' };
+    return { title: 'Category Not Found - OH Health+ Pharmacy' };
   }
 
   return {
-    title: `${categoryInfo.label} - OH Health + Pharmacy`,
+    title: `${categoryInfo.label} - OH Health+ Pharmacy`,
     description: categoryInfo.description,
   };
 }

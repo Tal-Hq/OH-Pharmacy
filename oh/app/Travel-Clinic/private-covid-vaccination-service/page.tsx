@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Private COVID Vaccination Service - OH Health + Pharmacy',
+  title: 'Private COVID Vaccination Service - OH Health+ Pharmacy',
   description: 'Private COVID-19 vaccination service available at our pharmacy.',
 };
 

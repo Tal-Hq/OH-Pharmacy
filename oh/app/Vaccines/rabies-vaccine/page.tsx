@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Rabies Vaccine - OH Health + Pharmacy',
+  title: 'Rabies Vaccine - OH Health+ Pharmacy',
   description: 'Rabies vaccination for travel protection.',
 };
 

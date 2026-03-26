@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Hajj and Umrah Vaccine - OH Health + Pharmacy',
+  title: 'Hajj and Umrah Vaccine - OH Health+ Pharmacy',
   description: 'Get the meningitis ACWY vaccine and certificate from our travel clinic for Hajj and Umrah.',
 };
 

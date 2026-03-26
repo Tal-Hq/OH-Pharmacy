@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Hepatitis B Vaccine - OH Health + Pharmacy',
+  title: 'Hepatitis B Vaccine - OH Health+ Pharmacy',
   description: 'Hepatitis B vaccination.',
 };
 

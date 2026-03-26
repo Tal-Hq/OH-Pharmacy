@@ -4,7 +4,7 @@ import Card from '@/components/ui/Card';
 import { getServicesByCategory } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'Vaccine Prices - OH Health + Pharmacy',
+  title: 'Vaccine Prices - OH Health+ Pharmacy',
   description: 'View our competitive vaccine prices for travel and general vaccinations.',
 };
 

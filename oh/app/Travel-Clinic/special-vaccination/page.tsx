@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Speciality Vaccine - OH Health + Pharmacy',
+  title: 'Speciality Vaccine - OH Health+ Pharmacy',
   description: 'We offer private speciality vaccines at our pharmacy, including Chickenpox, Shingles and HPV vaccines.',
 };
 

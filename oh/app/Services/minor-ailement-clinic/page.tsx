@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Private Minor Ailment Clinic - OH Health + Pharmacy',
+  title: 'Private Minor Ailment Clinic - OH Health+ Pharmacy',
   description: 'Our private minor ailment clinic provides expert advice and treatment for common health issues.',
 };
 

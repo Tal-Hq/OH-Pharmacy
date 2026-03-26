@@ -5,7 +5,7 @@ import { services, getServicesByCategory } from '@/lib/services';
 import { Service } from '@/lib/services';
 
 export const metadata: Metadata = {
-  title: 'Our Services - OH Health + Pharmacy',
+  title: 'Our Services - OH Health+ Pharmacy',
   description: 'Find out more about our range of private services. We offer access to expert healthcare services in Canterbury.',
 };
 

@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'HPV Vaccination - OH Health + Pharmacy',
+  title: 'HPV Vaccination - OH Health+ Pharmacy',
   description: 'Human Papillomavirus (HPV) vaccination.',
 };
 

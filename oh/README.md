@@ -1,4 +1,4 @@
-# OH Health + Pharmacy Website
+# OH Health+ Pharmacy Website
 
 A modern, ultra-sleek pharmacy website built with Next.js, TypeScript, and Tailwind CSS. This static site showcases all pharmacy services and enables online booking.
 

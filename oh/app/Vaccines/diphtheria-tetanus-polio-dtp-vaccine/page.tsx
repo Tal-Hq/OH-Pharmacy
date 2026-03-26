@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Diphtheria, Tetanus & Polio (DTP) Vaccine - OH Health + Pharmacy',
+  title: 'Diphtheria, Tetanus & Polio (DTP) Vaccine - OH Health+ Pharmacy',
   description: 'DTP combined vaccination.',
 };
 

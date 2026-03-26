@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Erectile Dysfunction Treatment - OH Health + Pharmacy',
+  title: 'Erectile Dysfunction Treatment - OH Health+ Pharmacy',
   description: 'Expert treatment and advice for erectile dysfunction.',
 };
 

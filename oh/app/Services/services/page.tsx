@@ -5,7 +5,7 @@ import { services } from '@/lib/services';
 import Breadcrumb from '@/components/ui/Breadcrumb';
 
 export const metadata: Metadata = {
-  title: 'All Services - OH Health + Pharmacy',
+  title: 'All Services - OH Health+ Pharmacy',
   description:
     'Find out more about our range of private services. We offer access to expert healthcare services in Canterbury.',
 };

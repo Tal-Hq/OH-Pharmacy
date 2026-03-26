@@ -4,7 +4,7 @@ import { getServiceBySlug } from '@/lib/services';
 import { notFound } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'Microsuction Earwax Removal Service - OH Health + Pharmacy',
+  title: 'Microsuction Earwax Removal Service - OH Health+ Pharmacy',
   description: 'We offer a private microsuction earwax removal service. Book your appointment online.',
 };
 
