@@ -7,6 +7,7 @@ interface CategoryCardProps {
   label: string;
   description: string;
   serviceCount: number;
+  image?: string;
 }
 
 export default function CategoryCard({
