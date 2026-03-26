@@ -177,10 +177,10 @@ export const services: Service[] = [
   },
   {
     id: 'meningitis-acwy',
-    title: 'Meningitis ACWY for Travel',
+    title: 'Meningitis ACWY',
     slug: '/Vaccines/meningitis-acwy-vaccine',
     category: 'vaccination',
-    description: 'Meningitis ACWY vaccination for travel, including Hajj and Umrah.',
+    description: 'Meningitis ACWY vaccination, including Hajj and Umrah.',
     fullDescription: 'Meningitis ACWY vaccination is required for travel to certain regions and for Hajj and Umrah pilgrimages. Get your vaccination and certificate.',
     bookingUrl: 'https://www.treatlocal.co.uk/online-booking/sidcup/hajj-umrah-vaccine/appointment',
     image: 'https://images.unsplash.com/photo-1576765608622-067973a79f53?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbmluZ2ludGlzJTIwdmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D',
