@@ -18,7 +18,7 @@ export default function Footer() {
             <p className="text-gray-300 mb-6 text-sm leading-relaxed">
               Your trusted partner in health and wellness. Providing expert care and private services to the Kent community.
             </p>
-            <div className="flex gap-4">
+          {/*   <div className="flex gap-4">
               <a
                 href="https://facebook.com"
                 target="_blank"
@@ -46,7 +46,7 @@ export default function Footer() {
               >
                 <FaLinkedin size={20} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
@@ -64,7 +64,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/Services/category/all" className="text-gray-300 hover:text-green-500 transition-colors text-sm">
+                <Link href="/Services" className="text-gray-300 hover:text-green-500 transition-colors text-sm">
                   All Services
                 </Link>
               </li>
@@ -120,7 +120,7 @@ export default function Footer() {
               <li className="flex items-start gap-3">
                 <FaMapMarkerAlt className="text-white mt-1 flex-shrink-0" size={18} />
                 <span className="text-gray-300 text-sm leading-relaxed">
-                  OH Health + Pharmacy<br />
+                  OH Health+ Pharmacy<br />
                   6 - 8 Longmarket<br />
                   Canterbury<br />
                   CT1 2JS<br />
@@ -151,10 +151,10 @@ export default function Footer() {
 
         <div className="border-t border-gray-700 mt-12 pt-8 text-center">
           <p className="text-gray-400 text-sm">
-            &copy; {new Date().getFullYear()} OH Health + Pharmacy. All rights reserved.{' '}
-            <Link href="/privacy-policy" className="hover:text-green-500 transition-colors">
+            &copy; {new Date().getFullYear()} OH Health+ Pharmacy. All rights reserved.{' '}
+            {/* <Link href="/privacy-policy" className="hover:text-green-500 transition-colors">
               Privacy Policy
-            </Link>
+            </Link> */}
           </p>
         </div>
       </div>

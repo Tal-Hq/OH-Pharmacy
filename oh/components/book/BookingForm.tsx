@@ -222,7 +222,7 @@ export default function BookingForm() {
   };
 
   return (
-    <div className="bg-white rounded-xl border border-primary p-8 md:p-12">
+    <div className="bg-white rounded-xl border  p-8 md:p-12">
       <h2 className="text-2xl md:text-3xl font-display font-bold text-primary mb-6">
         Booking Request Form
       </h2>
@@ -328,25 +328,7 @@ export default function BookingForm() {
           </select>
         </div>
 
-        {/* Preferred Contact Method */}
-        <div>
-          <label className="block text-sm font-semibold text-[#111418] mb-2">
-            How would you like to be contacted? <span className="text-red-500">*</span>
-          </label>
-          <select
-            value={preferredContact}
-            onChange={(e) => setPreferredContact(e.target.value)}
-            className="w-full px-4 py-3 border border-gray-300 rounded-lg bg-[#f4f7f6] focus:ring-2 focus:ring-primary focus:outline-none"
-            required
-          >
-            <option value="">Select preferred contact method</option>
-            {contactMethods.map((method) => (
-              <option key={method} value={method}>
-                {method}
-              </option>
-            ))}
-          </select>
-        </div>
+    
 
         {/* Name */}
         <div>

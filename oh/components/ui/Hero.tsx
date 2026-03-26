@@ -58,7 +58,7 @@ export default function Hero({
             </p>
           )}
           {children || (
-            <Button asChild variant="secondary" size="lg">
+            <Button asChild variant="secondary" size="lg" className="rounded-full">
               <Link href={ctaHref}>{ctaText}</Link>
             </Button>
           )}

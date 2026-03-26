@@ -120,8 +120,8 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                   </p>
                 </div>
                 <Link
-                  href={`/book-services?service=${service.id}`}
-                  className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 rounded-md px-8 bg-primary text-primary-foreground hover:bg-primary/90"
+                    href={`/book-services?service=${service.id}`}
+                    className="inline-flex items-center justify-center whitespace-nowrap rounded-full text-sm font-medium ring-offset-background transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 h-11 px-8 bg-primary text-primary-foreground hover:bg-primary/90"
                 >
                   Book Appointment
                 </Link>
@@ -134,7 +134,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                 <h3 className="text-2xl font-display font-semibold text-black mb-6">
                   Related Services
                 </h3>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   {relatedServices.map((related) => (
                     <div key={related.id} className="bg-white-off rounded-md p-6">
                       <h4 className="font-display font-semibold text-lg mb-2">
