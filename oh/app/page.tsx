@@ -99,25 +99,25 @@ export default function Home() {
             href: "/Travel-Clinic/travel-vaccination"
           },
           {
-            id: "speciality-vaccine",
-            title: "Speciality Vaccine",
-            description: "We offer private speciality vaccines at our pharmacy, including Chickenpox, Shingles and HPV vaccines. Book your appointment online.",
-            image: "https://images.unsplash.com/photo-1668874896975-7f874c90600a?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fHNwZWNpYWx0eSUyMHZhY2NpbmV8ZW58MHx8MHx8fDA%3D",
-            href: "/Travel-Clinic/special-vaccination"
+            id: "meningitis-acwy",
+            title: "Meningitis ACWY",
+            description: "Private meningitis ACWY vaccination service, including Hajj and Umrah requirements.",
+            image: "https://images.unsplash.com/photo-1576765608622-067973a79f53?w=400&auto=format&fit=crop&q=60",
+            href: "/Vaccines/meningitis-acwy-vaccine"
           },
           {
-            id: "earwax-removal",
-            title: "Earwax Removal",
-            description: "Professional microsuction earwax removal service. Safe, effective, and performed by trained professionals. Book your appointment online.",
-            image: "https://images.unsplash.com/photo-1741174844812-c59239e677be?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZWFyJTIwd2F4JTIwcmVtb3ZhbHxlbnwwfHwwfHx8MA%3D%3D",
-            href: "/Services/earwax-removal-service"
+            id: "flu-vaccination",
+            title: "Flu Vaccination",
+            description: "Seasonal flu vaccination available with fast appointments and expert care.",
+            image: "https://images.unsplash.com/photo-1691139600731-7232eaa980c3?w=400&auto=format&fit=crop&q=60",
+            href: "/Services/flu-vaccination"
           },
           {
-            id: "private-health-checks",
-            title: "Private Health Checks",
-            description: "Comprehensive health assessments and health MOTs to monitor your wellbeing. Includes blood pressure, cholesterol, and diabetes screening.",
-            image: "https://plus.unsplash.com/premium_photo-1661595281880-59563ed648c9?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8cHJpdmF0ZSUyMGhlYWx0aCUyMGNoZWNrfGVufDB8fDB8fHww",
-            href: "/Services/private-health-checks"
+            id: "erectile-dysfunction",
+            title: "Erectile Dysfunction",
+            description: "Discreet private consultations and treatment options with pharmacist prescribers.",
+            image: "https://images.unsplash.com/photo-1511174511562-5f7f18b874f8?w=400&auto=format&fit=crop&q=60",
+            href: "/Services/erectile-dysfunction"
           }
         ]}
       />

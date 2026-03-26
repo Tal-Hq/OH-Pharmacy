@@ -11,7 +11,7 @@ export interface Service {
   features?: string[];
 }
 
-export const services: Service[] = [
+const allServices: Service[] = [
   // 🩺 Clinical & Health Services
 {
   id: 'blood-pressure-checks',
@@ -712,6 +712,28 @@ export const services: Service[] = [
     image: 'https://images.unsplash.com/photo-1501621667575-af81f1f0bacc?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZXllJTIwY2FyZXxlbnwwfHwwfHx8MA%3D%3D',
   },
 ];
+
+const allowedServiceIds = new Set<string>([
+  'skin-conditions', // Acne
+  'travel-medication', // Altitude sickness, jet lag, travellers' diarrhoea
+  'chickenpox-vaccine',
+  'covid-vaccination',
+  'ear-infections',
+  'erectile-dysfunction',
+  'flu-vaccination',
+  'hpv',
+  'antimalarials', // Malaria
+  'meningitis-acwy',
+  'migraine-treatment',
+  'shingles',
+  'travel-clinic', // Travel health
+  'vitamin-b12',
+  'weight-loss',
+]);
+
+export const services: Service[] = allServices.filter((service) =>
+  allowedServiceIds.has(service.id),
+);
 
 export const getServiceBySlug = (slug: string): Service | undefined => {
   return services.find(service => service.slug === slug);
