@@ -32,6 +32,44 @@ export default function Home() {
         }}
       />
 
+      {/* Meningococcal Treatment Promo Section */}
+      <section className="px-4 py-10 mt-24 sm:px-6 lg:px-8 lg:py-14">
+        <div
+          className="relative mx-auto max-w-screen-xl overflow-hidden rounded-2xl bg-cover bg-center"
+          style={{
+            backgroundImage:
+              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGMYjSJr6JnmwDdITxz1i9ky0R8QVpF8Tg-5GWEWgrPReLJoKq9d2WqQJsDLoRD7r0EfRjQ62Le4fIPWXHS7pYZ41gKTTtNde_z9b0-uO08_xtgjkSooidZz2c9kpMbRFyXj-wTL-bry6H-icJPsrCG4ZzkuW2HeSrQ4pPZzhXLvxJhiGW9natkHjqhIeBR1OGetAP8daRi6xkXubn1ioFb_Q5xlK7a_0h-5HchVilEvbSBH7U5rjWZR77Pb4T6xcI06IGU1TjPeA')",
+          }}
+        >
+          <div className="bg-black/25 p-5 sm:p-8 lg:p-12">
+            <div className="ml-auto max-w-2xl rounded-2xl bg-white/90 p-6 backdrop-blur-sm sm:p-8">
+              <h2 className="mb-4 text-3xl font-bold leading-tight text-[#111418] sm:text-4xl">
+               Meningitis Care Available
+              </h2>
+              <p className="mb-4 text-base leading-relaxed text-[#374151]">
+                 We offer a private meningitis vaccination service, symptom assessment, and medically guided treatment support. 
+                 Book your appointment online today.
+              </p>
+             
+              <div className="flex flex-wrap gap-3">
+                <Link
+                  href="/book-services"
+                  className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary/90"
+                >
+                  Book Appointment
+                </Link>
+               {/*  <Link
+                  href="/Vaccines/meningitis-b-vaccine"
+                  className="inline-flex items-center justify-center rounded-full border border-[#d1d5db] bg-white px-6 py-3 text-sm font-semibold text-[#111418] transition-colors hover:bg-gray-50"
+                >
+                  Learn More
+                </Link> */}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Services */}
       <Feature72
         heading="Featured Services"
