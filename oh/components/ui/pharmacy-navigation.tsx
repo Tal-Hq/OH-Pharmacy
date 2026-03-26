@@ -69,6 +69,11 @@ export const vaccinationServices = [
     description: "Required for travel and Hajj/Umrah.",
   },
   {
+    title: "Meningitis B",
+    href: "/Vaccines/meningitis-b-vaccine",
+    description: "Private meningitis B vaccination service.",
+  },
+  {
     title: "COVID Vaccination",
     href: "/Travel-Clinic/private-covid-vaccination-service",
     description: "Private COVID-19 vaccination service.",

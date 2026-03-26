@@ -186,6 +186,16 @@ const allServices: Service[] = [
     image: 'https://images.unsplash.com/photo-1576765608622-067973a79f53?w=400&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fG1lbmluZ2ludGlzJTIwdmFjY2luZXxlbnwwfHwwfHx8MA%3D%3D',
   },
   {
+    id: 'meningitis-b',
+    title: 'Meningitis B Vaccine',
+    slug: '/Vaccines/meningitis-b-vaccine',
+    category: 'vaccination',
+    description: 'Private meningitis B vaccination service for at-risk groups.',
+    fullDescription:
+      'Our private meningitis B vaccination service helps protect against meningococcal group B disease. Book an appointment for expert advice and vaccination support.',
+    image: 'https://images.unsplash.com/photo-1584515933487-779824d29309?w=400&auto=format&fit=crop&q=60',
+  },
+  {
     id: 'covid-vaccination',
     title: 'Covid-19 Private Vaccinations',
     slug: '/Travel-Clinic/private-covid-vaccination-service',
@@ -724,6 +734,7 @@ const allowedServiceIds = new Set<string>([
   'hpv',
   'antimalarials', // Malaria
   'meningitis-acwy',
+  'meningitis-b',
   'migraine-treatment',
   'shingles',
   'travel-clinic', // Travel health
