@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Hero from '@/components/ui/Hero';
 import CategoryCard from '@/components/services/CategoryCard';
-import { services, getServicesByCategory } from '@/lib/services';
+import { getServicesByCategory } from '@/lib/services';
 import { Service } from '@/lib/services';
 
 export const metadata: Metadata = {
@@ -42,9 +42,13 @@ export default function ServicesPage() {
             </p>
           </div>
           <div className="grid gap-6 md:grid-cols-2  lg:gap-8">
-            {categories.map((category) => {
-              const categoryServices = getServicesByCategory(category.value);
-              return (
+            {categories
+              .map((category) => ({
+                category,
+                categoryServices: getServicesByCategory(category.value),
+              }))
+              .filter(({ categoryServices }) => categoryServices.length > 0)
+              .map(({ category, categoryServices }) => (
                 <CategoryCard
                   key={category.value}
                   category={category.value}
@@ -53,8 +57,7 @@ export default function ServicesPage() {
                   serviceCount={categoryServices.length}
                   image={category.image}
                 />
-              );
-            })}
+              ))}
           </div>
         </div>
       </section>
