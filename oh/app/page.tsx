@@ -4,6 +4,10 @@ import { Feature72 } from '@/components/ui/feature-72';
 import { HeroSection } from '@/components/ui/hero-section-2';
 import Map from '@/components/map';
 
+/** Shared pharmacy / clinic scene — homepage hero + meningitis promo section */
+const PHARMACY_PROMO_BG =
+  'https://lh3.googleusercontent.com/aida-public/AB6AXuBGMYjSJr6JnmwDdITxz1i9ky0R8QVpF8Tg-5GWEWgrPReLJoKq9d2WqQJsDLoRD7r0EfRjQ62Le4fIPWXHS7pYZ41gKTTtNde_z9b0-uO08_xtgjkSooidZz2c9kpMbRFyXj-wTL-bry6H-icJPsrCG4ZzkuW2HeSrQ4pPZzhXLvxJhiGW9natkHjqhIeBR1OGetAP8daRi6xkXubn1ioFb_Q5xlK7a_0h-5HchVilEvbSBH7U5rjWZR77Pb4T6xcI06IGU1TjPeA';
+const HERO_BG='https://lh3.googleusercontent.com/aida-public/AB6AXuCoUCXolrzADbvUrutY_UAPxBN2TkfBzPYo1tbbEhyMruRngLJU67zMcEBd8nxgnEoxyPdfdlh6XJgVzs1RxEWdSaKApLtQ-0QHfOz1z6uOKtr2ZpkkpI7GX69otwQ9xC4dUcYAjM7onHCXa3tfTQCKwx3ZLnFSRlewDpv1QFC2IhYnjQYVdVtld43RXDHMHvhiRon4eY5dfnr-XfcH0OF2mBEVbJhzK5XNb81SQ1KBAOppD3hTFF18wdgLVKc3R01eD6vs4RlRnK4';
 export default function Home() {
   return (
     <div className="min-h-screen max-w-screen-2xl mx-auto bg-white dark:bg-[#101922]">
@@ -12,24 +16,32 @@ export default function Home() {
         logo={{
           url: "/images/oh-logo.png",
           alt: "OH Health+ Pharmacy Logo",
-          text: "Welcome to OH Health+ Pharmacy"
+          text: "Welcome to OH Health+ Pharmacy",
         }}
-        title={
+        leadTitle={
           <>
             Your Partner in <br />
-            <span className="text-primary">Health & Wellness</span>
+            <span className="font-semibold text-green-300  drop-shadow-[0_1px_3px_rgba(0,0,0,0.5)]">
+              Health & Wellness
+            </span>
           </>
         }
-        subtitle="We offer expert travel vaccinations, weight loss programmes, wellness injections, and a full range of private healthcare services — all tailored to your needs."
-        callToAction={{
+        leadSubtitle="We offer expert travel vaccinations, weight loss programmes, wellness injections, and a full range of private healthcare services — all tailored to your needs."
+        leadCallToAction={{
           text: "BOOK AN APPOINTMENT",
           href: "/book-services",
         }}
-        backgroundImage="https://lh3.googleusercontent.com/aida-public/AB6AXuACJT9xEVblSG9BgdONhzauh1Pgqs2YiQdALqxWci0h6zigwK-v1_UZdkYnTWpdD3y9Jzw6TaFya9Mrwxhc6wgBMyl64LPPDaqZrHxOrxy-qf7c_DION9I6IX8ug_-i7ke6U19FYMIr2X1GtBnholl6tVp3OyBSwE1r3yRUN4kZj1pzOpGl6HI5Y1XIrc32FXTTwDx_DcKCV7OgoUOipuYilC1j11McCe51YPJqfo65KDZvQRBA1BaHRt44WOyFcP7w-nuftE20Vlev"
+        title={<>Get your vaccinations</>}
+        subtitle="Meningitis, Travel jabs, flu and more — book at our Canterbury pharmacy. Book a slot below."
+        callToAction={{
+          text: "Book vaccination",
+          href: "/Services/category/vaccination/",
+        }}
         contactInfo={{
           phone: "",
           address: "6 - 8 Longmarket, Canterbury, CT1 2JS, United Kingdom",
         }}
+        backgroundImage={HERO_BG}
       />
 
       {/* Meningococcal Treatment Promo Section */}
@@ -37,8 +49,7 @@ export default function Home() {
         <div
           className="relative mx-auto max-w-screen-xl overflow-hidden rounded-2xl bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://lh3.googleusercontent.com/aida-public/AB6AXuBGMYjSJr6JnmwDdITxz1i9ky0R8QVpF8Tg-5GWEWgrPReLJoKq9d2WqQJsDLoRD7r0EfRjQ62Le4fIPWXHS7pYZ41gKTTtNde_z9b0-uO08_xtgjkSooidZz2c9kpMbRFyXj-wTL-bry6H-icJPsrCG4ZzkuW2HeSrQ4pPZzhXLvxJhiGW9natkHjqhIeBR1OGetAP8daRi6xkXubn1ioFb_Q5xlK7a_0h-5HchVilEvbSBH7U5rjWZR77Pb4T6xcI06IGU1TjPeA')",
+            backgroundImage: `url(${JSON.stringify(PHARMACY_PROMO_BG)})`,
           }}
         >
           <div className="bg-black/25 p-5 sm:p-8 lg:p-12">
@@ -138,7 +149,7 @@ export default function Home() {
                   </button>
                 </Link>
                 <Link href="/Services/contact-us">
-                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-[#E8A87C] text-[#005A5B] font-bold hover:bg-[#E8A87C]/90 transition-colors">
+                  <button className="flex min-w-[84px] cursor-pointer items-center justify-center overflow-hidden rounded-full border border-white/20 h-12 px-5 bg-green-100 text-[#005A5B] font-bold hover:bg-[#E8A87C]/90 transition-colors">
                     <span className="truncate">Contact Us Today</span>
                   </button>
                 </Link>

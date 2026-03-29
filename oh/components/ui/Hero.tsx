@@ -35,7 +35,7 @@ export default function Hero({
     >
       {/* Overlay */}
       {image && (
-        <div className="absolute inset-0 bg-[#005A5B]/80 border-b-6" />
+        <div className="absolute inset-0 bg-[#005A5B]/80 " />
       )}
       {!image && (
         <div className="absolute inset-0 bg-gradient-to-br from-[#005A5B] to-[#007A7B]" />
@@ -66,7 +66,6 @@ export default function Hero({
       </div>
       
       {/* Decorative elements */}
-      <div className="absolute bottom-0 left-0 right-0 h-20  bg-white" style={{ clipPath: 'polygon(0 50%, 100% 0%, 100% 100%, 0% 100%)' }} />
     </section>
   );
 }

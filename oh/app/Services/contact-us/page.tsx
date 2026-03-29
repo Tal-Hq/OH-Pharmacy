@@ -34,7 +34,7 @@ export default function ContactUsPage() {
           
           </div>
 
-          <div className="grid grid-cols-1  gap-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
 
             {/* LEFT — GET IN TOUCH FORM */}
             <div className="bg-white rounded-xl border border-border p-8">
@@ -84,7 +84,7 @@ export default function ContactUsPage() {
             </div>
 
             {/* RIGHT — CONTACT INFO CARDS */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid sm:grid-cols-2 lg:grid-cols-1 gap-6">
 
               {/* Address */}
               <Card className="border border-border shadow-none">

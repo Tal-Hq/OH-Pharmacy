@@ -587,7 +587,7 @@ const allServices: Service[] = [
     slug: '/weight-loss-service',
     category: 'weight-loss',
     description: 'Medically supervised GLP-1 style programme in Canterbury with onboarding checks, injections or supply as approved, and habit coaching.',
-    fullDescription: 'Obesity increases strain on joints, blood sugar, and heart health — sustainable change needs more than willpower. Partnering with Expert Weight Loss, we provide eligibility screening (BMI, medical history, medicines), clinician oversight where required, and structured check-ins at the pharmacy. You get practical diet and movement lessons alongside medication where appropriate, plus dashboard tracking so progress is visible between visits.',
+    fullDescription: 'Obesity increases strain on joints, blood sugar, and heart health — sustainable change needs more than willpower. We provide eligibility screening (BMI, medical history, medicines), clinician oversight where required, and structured check-ins at the pharmacy. You get practical diet and movement lessons alongside medication where appropriate, plus dashboard tracking so progress is visible between visits.',
     features: [
       'Online consultations',
       'Diet and exercise advice',

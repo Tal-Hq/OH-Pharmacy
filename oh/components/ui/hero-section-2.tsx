@@ -1,34 +1,42 @@
 import React from 'react';
 import Link from 'next/link';
-import { cn } from "@/lib/utils";
-import { Pill } from "lucide-react";
+import { cn } from '@/lib/utils';
 
-// Icon component for contact details
-const InfoIcon = ({ type }: { type: 'website' | 'phone' | 'address' }) => {
-    const icons = {
-        website: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-primary">
-                <circle cx="12" cy="12" r="10"></circle>
-                <line x1="2" x2="22" y1="12" y2="12"></line>
-                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
-            </svg>
-        ),
-        phone: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-primary">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-            </svg>
-        ),
-        address: (
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-5 w-5 text-primary">
-                <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path>
-                <circle cx="12" cy="10" r="3"></circle>
-            </svg>
-        ),
-    };
-    return <div className="mr-2 flex-shrink-0">{icons[type]}</div>;
+const InfoIcon = ({ type }: { type: 'address' }) => {
+  const icons = {
+    address: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="h-5 w-5 text-primary"
+      >
+        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
+        <circle cx="12" cy="10" r="3" />
+      </svg>
+    ),
+  };
+  return <div className="mr-2 flex-shrink-0">{icons[type]}</div>;
 };
 
-// Prop types for the HeroSection component
+function PushPin({ className }: { className?: string }) {
+  return (
+    <div
+      className={cn(
+        'absolute z-10 h-3.5 w-3.5 rounded-full bg-red-600 shadow-md ring-2 ring-red-900/25',
+        className,
+      )}
+      aria-hidden
+    />
+  );
+}
+
 interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 'title'> {
   logo?: {
     url: string;
@@ -36,13 +44,21 @@ interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 't
     text?: string;
   };
   slogan?: string;
+  /** Left column: classic hero headline (e.g. Health & Wellness). */
+  leadTitle: React.ReactNode;
+  leadSubtitle: string;
+  leadCallToAction: {
+    text: string;
+    href: string;
+  };
+  /** Right column: notice board headline (e.g. Get your vaccinations). */
   title: React.ReactNode;
   subtitle: string;
   callToAction: {
     text: string;
     href: string;
   };
-  backgroundImage: string;
+  backgroundImage?: string;
   contactInfo: {
     phone: string;
     address: string;
@@ -50,76 +66,135 @@ interface HeroSectionProps extends Omit<React.HTMLAttributes<HTMLDivElement>, 't
 }
 
 const HeroSection = React.forwardRef<HTMLDivElement, HeroSectionProps>(
-  ({ className, logo, slogan, title, subtitle, callToAction, backgroundImage, contactInfo, ...props }, ref) => {
+  (
+    {
+      className,
+      logo,
+      slogan,
+      leadTitle,
+      leadSubtitle,
+      leadCallToAction,
+      title,
+      subtitle,
+      callToAction,
+      contactInfo,
+      backgroundImage,
+      ...props
+    },
+    ref,
+  ) => {
     return (
       <section
         ref={ref}
         className={cn(
-          "relative flex w-full mx-auto flex-col overflow-hidden  bg-[#F4F7F6] dark:bg-[#182430]text-foreground md:flex-row",
-          className
+          'relative overflow-hidden py-10 text-foreground md:py-14',
+          !backgroundImage && 'bg-[#8f6f47] dark:bg-[#4a3824]',
+          backgroundImage && 'min-h-[28rem] md:min-h-[32rem]',
+          className,
         )}
         {...props}
       >
-        {/* Left Side: Content */}
-        <div className="flex w-full flex-col justify-between p-8 md:w-1/2 md:p-8 lg:w-3/5 lg:p-20">
-            {/* Top Section: Logo & Main Content */}
-            <div>
-                <header className="mb-12">
-                    {logo && (
-                        <div className="flex items-center">
-                           
-                            <div>
-                                {logo.text && <p className="text-lg font-bold text-foreground">{logo.text}</p>}
-                                {slogan && <p className="text-xs tracking-wider text-muted-foreground">{slogan}</p>}
-                            </div>
-                        </div>
-                    )}
-                </header>
+        {backgroundImage ? (
+          <div
+            className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+            style={{ backgroundImage: `url(${JSON.stringify(backgroundImage)})` }}
+          />
+        ) : null}
 
-                <main>
-                    <h1 className="text-4xl font-bold leading-tight text-foreground md:text-5xl">
-                        {title}
-                    </h1>
-                    <div className="my-6 h-1 w-20 bg-primary"></div>
-                    <p className="mb-8 max-w-md text-base text-muted-foreground">
-                        {subtitle}
-                    </p>
-                    <Link 
-                      href={callToAction.href} 
-                      className="text-lg font-bold bg-primary text-primary-foreground hover:text-white hover:bg-primary/90  rounded-full px-6 py-4  border border-white tracking-wide text-primary transition-colors hover:text-primary/80"
-                    >
-                        {callToAction.text}
-                    </Link>
-                </main>
+        {backgroundImage ? (
+          <>
+            <div className="absolute inset-0 bg-gradient-to-br from-black/60 via-black/45 to-[#2c1810]/85 " />
+            <div
+              className="pointer-events-none absolute inset-0 opacity-[0.12] "
+              style={{
+                backgroundImage:
+                  'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.15) 0%, transparent 45%), radial-gradient(#000 1px, transparent 1px)',
+                backgroundSize: 'auto, 12px 12px',
+              }}
+            />
+          </>
+        ) : (
+          <div
+            className="pointer-events-none absolute inset-0 opacity-30 dark:opacity-20"
+            style={{
+              backgroundImage:
+                'radial-gradient(circle at 20% 30%, rgba(255,255,255,0.12) 0%, transparent 50%), radial-gradient(circle at 80% 70%, rgba(0,0,0,0.08) 0%, transparent 40%), radial-gradient(#6b4e2e 1px, transparent 1px)',
+              backgroundSize: 'auto, auto, 10px 10px',
+            }}
+          />
+        )}
+
+        <div className="relative z-10 mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="flex flex-col gap-10 lg:flex-row lg:items-start lg:justify-between lg:gap-12 xl:gap-16">
+            {/* Left: classic hero */}
+            <div className="flex w-full flex-1 flex-col justify-between lg:max-w-xl lg:pt-2">
+              <div>
+                {logo && (logo.text || logo.url) && (
+                  <header className="mb-8 md:mb-10">
+                    <div className="flex items-center gap-3">
+                      
+                      <div>
+                        {logo.text && (
+                          <p className="text-lg font-bold text-white drop-shadow-sm">
+                            {logo.text}
+                          </p>
+                        )}
+                        {slogan && (
+                          <p className="mt-1 text-xs tracking-wider text-white/85">{slogan}</p>
+                        )}
+                      </div>
+                    </div>
+                  </header>
+                )}
+
+                <h1 className="text-4xl font-bold leading-tight text-white drop-shadow-sm md:text-5xl ">
+                  {leadTitle}
+                </h1>
+                <div className="my-6 h-1 w-20 bg-[#ECE47A] shadow-[0_0_12px_rgba(236,228,122,0.45)]" />
+                <p className="mb-8 max-w-md text-base text-white/85 ">
+                  {leadSubtitle}
+                </p>
+             
+              </div>
             </div>
 
-            {/* Bottom Section: Footer Info */}
-            <footer className="mt-12 w-full">
-                <div className="grid grid-cols-1 gap-6 text-xs text-muted-foreground sm:grid-cols-3">
-                    
-                    <div className="flex items-center">
-                        <InfoIcon type="address" />
-                        <span>{contactInfo.address}</span>
-                    </div>
+            {/* Right: main notice */}
+            <div className="relative mx-auto w-full max-w-lg shrink-0 lg:mx-0">
+              <div className="relative -rotate-1 lg:-rotate-2">
+                <PushPin className="-top-1 left-1/2 -translate-x-1/2" />
+                <div className="mt-2 border border-amber-200/90 bg-[#fffef7] p-6 pt-9 shadow-[6px_6px_0_rgba(0,0,0,0.12)] dark:border-amber-900/40 dark:bg-[#2a2319] dark:shadow-[6px_6px_0_rgba(0,0,0,0.35)] md:p-8 md:pt-10">
+                  
+                  <h2 className="font-serif text-3xl font-black uppercase leading-tight tracking-tight text-[#1a1a1a]  md:text-4xl lg:text-[2.75rem]">
+                    {title}
+                  </h2>
+                  <p className="mt-4 text-base leading-relaxed text-[#333] ">
+                    {subtitle}
+                  </p>
+                  <div className="mt-6 border-t border-dashed border-amber-900/15 pt-6 ">
+                    <Link
+                      href={callToAction.href}
+                      className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-bold uppercase tracking-wide text-primary-foreground shadow-sm transition-colors hover:bg-primary/90"
+                    >
+                      {callToAction.text}
+                    </Link>
+                  </div>
                 </div>
-            </footer>
-        </div>
+              </div>
+            </div>
+          </div>
 
-        {/* Right Side: Image with Clip Path */}
-        <div 
-          className="w-full min-h-[300px] bg-cover bg-center md:w-1/2 md:min-h-full lg:w-2/5"
-          style={{ 
-            backgroundImage: `url(${backgroundImage})`,
-            clipPath: 'polygon(25% 0, 100% 0, 100% 100%, 0% 100%)',
-          }}
-        >
+          <footer className="mt-12 border-t border-white/20 pt-6 ">
+            <div className="flex items-start text-sm text-white/95">
+              <InfoIcon type="address" />
+              <span>{contactInfo.address}</span>
+            </div>
+          </footer>
         </div>
       </section>
     );
-  }
+  },
 );
 
-HeroSection.displayName = "HeroSection";
+HeroSection.displayName = 'HeroSection';
 
 export { HeroSection };
-
